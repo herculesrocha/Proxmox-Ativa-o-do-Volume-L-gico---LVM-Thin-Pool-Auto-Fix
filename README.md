@@ -108,4 +108,5 @@ Uso livre para ambientes de infraestrutura e administração de sistemas.
 
 # Autor
 Hercules Rocha
+
 Runbook criado para operações de administração em ambientes Proxmox.
