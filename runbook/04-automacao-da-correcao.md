@@ -23,14 +23,14 @@ Conteúdo:
 ```
 [Unit]
 Description=Proxmox LVM Auto Fix
-DefaultDependencies=no
 After=lvm2-monitor.service
+After=systemd-udev-settle.service
 Before=pve-guests.service
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/sbin/proxmox-lvm-fix.sh
-RemainAfterExit=yes
+TimeoutStartSec=60
 
 [Install]
 WantedBy=multi-user.target
